@@ -1,5 +1,6 @@
 :root {
-  --orange: #ea863b;
+  --orange: #f57c00;
+  --shade-orange: #e65100;
   --shade-orange: #bc5a1d;
   --brown: #7d4122;
   --shade-brown: #391f16;
@@ -12,7 +13,7 @@ html {
           box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-color: var(--cream);
+  background-color: cornsilk;
 }
 
 *,
@@ -344,6 +345,15 @@ a {
   background-position: center center, 79% 35%, center center, 0 0;
   -webkit-animation: hero-image 40s linear infinite;
           animation: hero-image 40s linear infinite;
+  position: relative;
+}
+
+.home-article .hero-container .hero-image .images .filter {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @-webkit-keyframes hero-image {
@@ -396,16 +406,16 @@ a {
 }
 
 .home-article .hero-container .hero-text .text h1 {
-  width: 90vw;
-  font-size: MIN(10vh, 10vw, 60px);
-  font-family: 'Cinzel Decorative';
-  color: var(--cream);
-  text-shadow: 3px 3px 2px var(--brown);
+  width: 80vw;
+  font-size: MIN(12vh, 12vw, 100px);
+  font-family: 'UnifrakturCook';
+  color: white;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
 }
 
 .home-article .hero-container .hero-text .text p {
   font-size: MIN(5vh, 5vw, 30px);
-  font-weight: bold;
+  font-weight: 400;
   color: white;
   text-shadow: 1px 1px 2px black;
 }
