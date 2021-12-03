@@ -29,16 +29,15 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: sans-serif;
+  font-family: 'Cinzel';
+
+  overflow-x: hidden;
+
+  /* LOADER -------> */
+  overflow-y: hidden;
 
   &::-webkit-scrollbar {
-    width: 14px;
-
-    background-color: red;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background-color: blue;
+    width: 0px;
   }
 }
 
