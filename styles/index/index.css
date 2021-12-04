@@ -27,7 +27,8 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: 'Cinzel';
+  /* font-family: 'Cinzel'; */
+  font-family: sans-serif;
   overflow-x: hidden;
   /* LOADER -------> */
   overflow-y: hidden;
@@ -136,7 +137,7 @@ a {
 
 #charging-screen h3 {
   margin-top: MIN(2vh, 2vw);
-  color: white;
+  color: var(--orange);
   font-size: MIN(2.5vh, 2.5vw);
   font-family: sans-serif;
 }
@@ -199,10 +200,15 @@ a {
   padding: 1rem 0;
   border-bottom: 0.2rem solid var(--brown);
   background-color: var(--shade-brown);
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Cinzel';
   color: var(--cream);
   text-align: center;
   font-weight: bold;
+}
+
+.header .nav .nav__content a:hover {
+  background-color: var(--orange);
 }
 
 .header .buttom {
@@ -216,7 +222,7 @@ a {
   width: 100%;
   height: 20%;
   position: absolute;
-  background-color: var(--cream);
+  background-color: var(--orange);
   border-radius: 1rem;
   -webkit-transition: -webkit-transform 0.25s linear;
   transition: -webkit-transform 0.25s linear;
@@ -313,10 +319,6 @@ a {
     padding: 0 1.5rem;
     border: none;
     background-color: var(--brown);
-    font-size: 1.5rem;
-    color: var(--cream);
-    text-align: center;
-    font-weight: bold;
   }
   .header .buttom {
     visibility: hidden;
@@ -339,7 +341,7 @@ a {
   width: 100%;
   height: 100vw;
   margin-top: 10vh;
-  background-image: url("../../assets/images/front.png"), url("../../assets/images/test.png"), url("../../assets/images/back.png"), url("../../assets/images/sky.png");
+  background-image: url("../../assets/images/front.png"), url("../../assets/images/mammoth.png"), url("../../assets/images/back.png"), url("../../assets/images/sky.png");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: cover, 10%, cover, 350%;
   background-position: center center, 79% 35%, center center, 0 0;
@@ -348,35 +350,31 @@ a {
   position: relative;
 }
 
-.home-article .hero-container .hero-image .images .filter {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 @-webkit-keyframes hero-image {
   0% {
-    background-position: center center, 79% 36%, center center, -175vw 0;
+    background-size: cover, 8%, cover, 350%;
+    background-position: center center, 79% 36.5%, center center, -175vw 0;
   }
-  50% {
-    background-position: center center, 0% 42%, center center, -87.5vw 0;
+  20% {
+    background-position: center center, 50.5% 38%, center center, -175vw 0;
   }
   100% {
-    background-position: center center, 79% 36%, center center, 0 0;
+    background-size: cover, 35%, cover, 350%;
+    background-position: center center, -60% 36.5%, center center, 0 0;
   }
 }
 
 @keyframes hero-image {
   0% {
-    background-position: center center, 79% 36%, center center, -175vw 0;
+    background-size: cover, 8%, cover, 350%;
+    background-position: center center, 79% 36.5%, center center, -175vw 0;
   }
-  50% {
-    background-position: center center, 0% 42%, center center, -87.5vw 0;
+  20% {
+    background-position: center center, 50.5% 38%, center center, -175vw 0;
   }
   100% {
-    background-position: center center, 79% 36%, center center, 0 0;
+    background-size: cover, 35%, cover, 350%;
+    background-position: center center, -60% 36.5%, center center, 0 0;
   }
 }
 
@@ -407,17 +405,18 @@ a {
 
 .home-article .hero-container .hero-text .text h1 {
   width: 80vw;
-  font-size: MIN(12vh, 12vw, 100px);
+  font-size: MIN(12vh, 12vw, 120px);
   font-family: 'UnifrakturCook';
-  color: white;
-  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+  color: var(--orange);
+  text-shadow: 1px 1px 0px black, -1px -1px 0px black;
 }
 
 .home-article .hero-container .hero-text .text p {
-  font-size: MIN(5vh, 5vw, 30px);
+  font-size: MIN(5vh, 5vw, 50px);
+  font-family: 'Cinzel';
   font-weight: 400;
   color: white;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 0px black;
 }
 
 .home-article .hero-container .hero-text .img {
@@ -436,6 +435,9 @@ a {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
+  30% {
+    opacity: 1;
+  }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -449,6 +451,9 @@ a {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
+  30% {
+    opacity: 1;
+  }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -460,5 +465,112 @@ a {
   .home-article .hero-container .hero-text .img {
     display: block;
   }
+}
+
+.main-article {
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main-article .comments {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.main-article .comments [class^='comment'] {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 15vh;
+}
+
+.main-article .comments [class^='comment'] h2 {
+  font-size: 2rem;
+}
+
+.main-article .comments [class^='comment'] p {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.main-article .comments .comment3 iframe {
+  width: 100%;
+}
+
+.main-article .description {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--orange);
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.main-article .description h2 {
+  font-size: 2rem;
+}
+
+.main-article .description ul {
+  list-style-position: inside;
+}
+
+.main-article .description p {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    max-width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-article .comments {
+    width: 45%;
+    height: auto;
+    padding: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-article .comments [class^='comment'] {
+    margin: 0;
+  }
+  .main-article .description {
+    width: 45%;
+    height: auto;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vh;
+  background-color: var(--brown);
+}
+
+.footer img {
+  width: 6vh;
 }
 /*# sourceMappingURL=index.css.map */

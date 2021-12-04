@@ -17,7 +17,7 @@
 
         margin-top: 10vh;
         background-image: url('../../assets/images/front.png'),
-          url('../../assets/images/test.png'),
+          url('../../assets/images/mammoth.png'),
           url('../../assets/images/back.png'),
           url('../../assets/images/sky.png');
         background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -27,26 +27,19 @@
         animation: hero-image 40s linear infinite;
 
         position: relative;
-
-        .filter {
-          width: 100vw;
-          height: 100vh;
-
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
       }
 
       @keyframes hero-image {
         0% {
-          background-position: center center, 79% 36%, center center, -175vw 0;
+          background-size: cover, 8%, cover, 350%;
+          background-position: center center, 79% 36.5%, center center, -175vw 0;
         }
-        50% {
-          background-position: center center, 0% 42%, center center, -87.5vw 0;
+        20% {
+          background-position: center center, 50.5% 38%, center center, -175vw 0;
         }
         100% {
-          background-position: center center, 79% 36%, center center, 0 0;
+          background-size: cover, 35%, cover, 350%;
+          background-position: center center, -60% 36.5%, center center, 0 0;
         }
       }
     }
@@ -70,17 +63,18 @@
 
         h1 {
           width: 80vw;
-          font-size: MIN(12vh, 12vw, 100px);
+          font-size: MIN(12vh, 12vw, 120px);
           font-family: 'UnifrakturCook';
-          color: white;
-          text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+          color: var(--orange);
+          text-shadow: 1px 1px 0px black, -1px -1px 0px black;
         }
 
         p {
-          font-size: MIN(5vh, 5vw, 30px);
+          font-size: MIN(5vh, 5vw, 50px);
+          font-family: 'Cinzel';
           font-weight: 400;
           color: white;
-          text-shadow: 1px 1px 2px black;
+          text-shadow: 1px 1px 0px black;
         }
       }
 
@@ -98,6 +92,9 @@
             transform: translateY(-100%);
           }
 
+          30% {
+            opacity: 1;
+          }
           100% {
             opacity: 1;
             transform: translateY(0);
