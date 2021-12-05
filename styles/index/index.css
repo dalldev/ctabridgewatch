@@ -340,7 +340,7 @@ a {
 .home-article .hero-container .hero-image .images {
   width: 100%;
   height: 100vw;
-  margin-top: 10vh;
+  margin-top: 0;
   background-image: url("../../assets/images/front.png"), url("../../assets/images/mammoth.png"), url("../../assets/images/back.png"), url("../../assets/images/sky.png");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: cover, 10%, cover, 350%;
@@ -348,6 +348,14 @@ a {
   -webkit-animation: hero-image 40s linear infinite;
           animation: hero-image 40s linear infinite;
   position: relative;
+}
+
+.home-article .hero-container .hero-image .images .filter {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(transparent));
+  background-image: linear-gradient(180deg, white, transparent);
 }
 
 @-webkit-keyframes hero-image {
@@ -382,7 +390,7 @@ a {
   width: 100%;
   height: 90vh;
   position: absolute;
-  top: 10vh;
+  top: 0vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,12 +411,9 @@ a {
   text-align: center;
 }
 
-.home-article .hero-container .hero-text .text h1 {
-  width: 80vw;
-  font-size: MIN(12vh, 12vw, 120px);
-  font-family: 'UnifrakturCook';
-  color: var(--orange);
-  text-shadow: 1px 1px 0px black, -1px -1px 0px black;
+.home-article .hero-container .hero-text .text img {
+  width: 75%;
+  max-width: 700px;
 }
 
 .home-article .hero-container .hero-text .text p {
@@ -420,7 +425,7 @@ a {
 }
 
 .home-article .hero-container .hero-text .img {
-  width: MIN(20vh, 20vw);
+  width: MIN(15vh, 15vw);
   display: none;
 }
 
@@ -432,8 +437,8 @@ a {
 @-webkit-keyframes arrow-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
   30% {
     opacity: 1;
@@ -448,8 +453,8 @@ a {
 @keyframes arrow-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
   }
   30% {
     opacity: 1;
